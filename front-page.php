@@ -17,7 +17,7 @@ get_header();
 
 
       <?php  if ( $cards = get_field('homepage_cards') ) { ?>
-			<section class="homepage-cards">
+			<section class="homepage-cards <?php echo (count($cards)>3) ? 'cols4':'cols3'?>">
         <div class="wrapper">
           <div class="cards">
           <?php $n=1; foreach ($cards as $item) {  
@@ -40,8 +40,9 @@ get_header();
             ?>
             <div class="card <?php echo $card_class.$visibility ?>">
               <a href="<?php echo $cardLink ?>" target="<?php echo $cardTarget ?>" class="inside">
-                <figure <?php echo $image_style ?>>
+                <figure>
                   <?php if ($img) { ?>
+                  <span class="image"<?php echo $image_style ?>></span>
                   <img src="<?php echo $img['url'] ?>" alt="<?php echo $img['title'] ?>">
                   <?php } ?>
                 </figure>

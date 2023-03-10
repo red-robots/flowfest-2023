@@ -1584,20 +1584,25 @@ section.homepage-cards .cards{display:-webkit-box;display:-ms-flexbox;display:fl
 section.homepage-cards .card{width:100%;padding:15px;position:relative}
 section.homepage-cards .card *{-webkit-transition:all ease .3s;transition:all ease .3s}
 section.homepage-cards .card .inside{display:block;text-decoration:none;background:#f2e5c9;border-radius:10px;overflow:hidden;min-height:23em;position:relative}
-section.homepage-cards .card figure{margin:0;width:100%;height:40%;position:absolute;top:0;left:0;-webkit-transition:height ease .5s;transition:height ease .5s;background-size:cover;background-position:center;background-repeat:no-repeat}
+section.homepage-cards .card figure{margin:0;width:100%;height:100%;position:absolute;top:0;left:0;overflow:hidden}
+section.homepage-cards .card figure span.image{display:block;width:100%;height:100%;position:absolute;top:0;left:0;-webkit-transition:height ease .5s;transition:height ease .5s;background-size:cover;background-position:center;background-repeat:no-repeat;background-color:#ccc;-webkit-clip-path:inset(30% 0 30% 0);clip-path:inset(30% 0 30% 0);-webkit-transform:translateY(-30%);transform:translateY(-30%);-webkit-transition:all ease-in-out .3s;transition:all ease-in-out .3s}
+section.homepage-cards .card figure span.image:before{content:"";display:block;width:100%;height:100%;position:absolute;top:0;left:0;background:#000;opacity:0;-webkit-transition:all ease .3s;transition:all ease .3s}
 section.homepage-cards .card figure img{display:none}
 section.homepage-cards .card .titlediv{width:100%;height:60%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:absolute;left:0;bottom:0}
 section.homepage-cards .card .titlediv .wrap{position:relative;top:-10px}
 section.homepage-cards .card .title{font-family:"CHUMI CHAMI",sans-serif;font-size:1.6rem;line-height:1.2;text-transform:uppercase;color:#9e7852}
 section.homepage-cards .card .icon{width:90px;height:90px;text-align:center;margin:0 auto;position:relative;top:-15px}
-section.homepage-cards .card .icon span{display:inline-block;width:120px;height:90px;background-size:80%;background-position:center;background-repeat:no-repeat;position:relative;top:20px}
+section.homepage-cards .card .icon span{display:inline-block;width:120px;height:90px;background-size:80%;background-position:center;background-repeat:no-repeat;position:absolute;top:20px;left:-15px}
 section.homepage-cards .card.even .inside{background:#0a2e3d}
 section.homepage-cards .card.third .inside{background:#c7a666}
 section.homepage-cards .card.third .inside .title{color:#f2e5c9}
 section.homepage-cards .card.hide{display:none}
-section.homepage-cards .card a:hover figure{height:100%}
+section.homepage-cards .card a:hover figure span{-webkit-clip-path:inset(0 0 0 0);clip-path:inset(0 0 0 0);-webkit-transform:translateY(0);transform:translateY(0)}
+section.homepage-cards .card a:hover figure span:before{opacity:.5}
 section.homepage-cards .card a:hover .titlediv{height:100%}
 section.homepage-cards .card a:hover .title{color:#fff !important}
+section.homepage-cards.cols4 .wrapper{max-width:100%}
+section.homepage-cards.cols4 .cards .card{width:100%}
 .banner-top-text{position:relative;height:45px;background:#b16b4f}
 .banner-top-text .wrapper{height:100%}
 .banner-top-text .reg-button{display:inline-block;position:absolute;top:0;left:0;height:100%;z-index:15}
@@ -1804,6 +1809,8 @@ section.home-cards .card{width:50%}
 section.home-cards .card .overlay.o1,section.home-cards .card .overlay.o4,section.home-cards .card .overlay.o5,section.home-cards .card .overlay.o8,section.home-cards .card .overlay.o10{background-color:rgba(180,168,89,.7)}
 section.home-cards .card .overlay.o2,section.home-cards .card .overlay.o3,section.home-cards .card .overlay.o6,section.home-cards .card .overlay.o7,section.home-cards .card .overlay.o9{background-color:rgba(190,103,72,.7)}
 section.homepage-cards .card{width:33.333%}
+section.homepage-cards.cols4 .wrapper{max-width:85vw}
+section.homepage-cards.cols4 .cards .card{width:25%}
 #popup-content .popup-content .flex-wrap .text{width:60%;padding:4vw}
 #popup-content .popup-content .flex-wrap .photo{width:40%}
 #popup-content .popup-content.activity .flex-wrap.half .text{padding:0 30px 0 0}
