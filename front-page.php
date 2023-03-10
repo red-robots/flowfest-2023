@@ -50,8 +50,8 @@ get_header();
                     <?php if ($icon && preg_replace('/\s+/', '', $icon)) { ?>
                       <div class="icon <?php echo $icon ?>"><span></span></div>
                       <style>
-                        .card .<?php echo preg_replace('/\s+/', '', $icon);?> span {background-image:url('<?php echo get_stylesheet_directory_uri() . '/images/icons/' . preg_replace('/\s+/', '', $icon)?>.png')}
-                        .card a:hover .<?php echo preg_replace('/\s+/', '', $icon); ?> span{background-image:url('<?php echo get_stylesheet_directory_uri() . '/images/icons/' . preg_replace('/\s+/', '', $icon)?>-hover.png')}
+                        .card .<?php echo preg_replace('/\s+/', '', $icon);?> span {background-image:url('<?php echo get_stylesheet_directory_uri() . '/images/_icons/' . preg_replace('/\s+/', '', $icon)?>.png')}
+                        .card a:hover .<?php echo preg_replace('/\s+/', '', $icon); ?> span{background-image:url('<?php echo get_stylesheet_directory_uri() . '/images/_icons/' . preg_replace('/\s+/', '', $icon)?>-hover.png')}
                       </style>
                     <?php } ?>
                     <div class="title"><?php echo $title ?></div>
