@@ -1459,7 +1459,7 @@ body{font-family:"Hind",sans-serif;font-size:15px;line-height:1.4;background-col
 .site{position:relative;overflow-x:hidden;overflow-y:auto}
 header.site-header{position:relative;width:100%;height:60px;background-color:#f2e5c9;z-index:100}
 header.site-header .wrapper{z-index:10;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
-.floral-pattern{position:relative;background-image:url("images/n_floral.svg");background-size:50%;background-position:center;background-repeat:repeat-x}
+.floral-pattern{position:relative;background-image:url("images/n_floral.svg");background-size:160%;background-position:center;background-repeat:repeat-x}
 #site-logo{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-line-pack:center;align-content:center;position:absolute;top:0;left:0;height:100%}
 #site-logo a{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-ms-flex-line-pack:center;align-content:center;background-color:#f2e5c9;padding:5px 15px}
 #site-logo a img{width:auto;height:36px;position:relative;left:-1px}
@@ -1495,8 +1495,8 @@ footer.site-footer nav.footer ul{margin:0;padding:0}
 footer.site-footer nav.footer li{margin:0;padding:0;display:inline-block;line-height:3}
 footer.site-footer nav.footer a{display:block;padding:10px 25px;color:#fff;text-decoration:none;opacity:.8}
 footer.site-footer nav.footer a:hover{opacity:1;color:#fff}
-#mobile-menu-toggle{display:none;width:60px;height:60px;position:fixed;top:0;right:6px;text-align:center}
-#mobile-menu-toggle span.bar{display:block;width:25px;margin:0 auto;top:50%;left:50%;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%)}
+#mobile-menu-toggle{display:none;width:60px;height:60px;position:fixed;top:0;right:6px;text-align:center;background-color:#f2e5c9}
+#mobile-menu-toggle span.bar{display:block;width:25px;margin:0 auto;top:50%;left:50%;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);margin-left:-2px}
 #mobile-menu-toggle span.bar,#mobile-menu-toggle span.bar:before,#mobile-menu-toggle span.bar:after{position:absolute;height:2px;background:#c7a666;-webkit-transition:all ease .2s;transition:all ease .2s}
 #mobile-menu-toggle span.bar:before,#mobile-menu-toggle span.bar:after{content:"";display:block;width:100%}
 #mobile-menu-toggle span.bar:before{top:-10px}
@@ -1550,7 +1550,7 @@ footer.site-footer nav.footer a:hover{opacity:1;color:#fff}
 section.pagetitle{background-color:#0a2e3d;position:relative}
 section.pagetitle h1{display:block;width:100%;text-align:center;font-family:"Tan Nimbus","Trebuchet MS",sans-serif;font-size:1.5rem;line-height:1.2;color:#fff;text-transform:uppercase;position:relative;top:4px;margin:0;padding:0 15px 0 95px;letter-spacing:1px}
 section.pagetitle .wrapper{position:relative;min-height:40px;height:100%;padding:10px 15px}
-section.pagetitle .reg{display:inline-block;width:120px;height:120px;position:absolute;top:-40px;left:8px;z-index:5}
+section.pagetitle .reg{display:inline-block;width:120px;height:120px;position:absolute;top:-40px;left:28px;z-index:5}
 section.pagetitle .reg a{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-ms-flex-line-pack:center;align-content:center;line-height:1.1;color:#fff;text-transform:uppercase;width:100%;height:100%;text-decoration:none}
 section.pagetitle .reg a *{-webkit-transition:all ease .3s;transition:all ease .3s}
 section.pagetitle .reg a:before{content:"";display:block;width:195px;height:195px;position:absolute;top:-20px;left:-34px;-webkit-transition:all ease .3s;transition:all ease .3s;background-image:url("images/n_register.svg");background-size:100%;background-repeat:no-repeat}
@@ -1587,13 +1587,13 @@ section.homepage-cards .wrapper{max-width:100%}
 section.homepage-cards .cards{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding:5rem 0}
 section.homepage-cards .card{width:100%;padding:15px;position:relative}
 section.homepage-cards .card *{-webkit-transition:all ease .3s;transition:all ease .3s}
-section.homepage-cards .card .inside{display:block;text-decoration:none;background:#f2e5c9;border-radius:10px;overflow:hidden;min-height:23em;position:relative}
+section.homepage-cards .card .inside{display:block;text-decoration:none;background:#f2e5c9;border-radius:10px;overflow:hidden;min-height:24em;position:relative}
 section.homepage-cards .card figure{margin:0;width:100%;height:100%;position:absolute;top:0;left:0;overflow:hidden}
 section.homepage-cards .card figure span.image{display:block;width:100%;height:100%;position:absolute;top:0;left:0;-webkit-transition:height ease .5s;transition:height ease .5s;background-size:cover;background-position:center;background-repeat:no-repeat;background-color:#ccc;-webkit-clip-path:inset(30% 0 30% 0);clip-path:inset(30% 0 30% 0);-webkit-transform:translateY(-30%);transform:translateY(-30%);-webkit-transition:all ease-in-out .3s;transition:all ease-in-out .3s}
 section.homepage-cards .card figure span.image:before{content:"";display:block;width:100%;height:100%;position:absolute;top:0;left:0;background:#000;opacity:0;-webkit-transition:all ease .3s;transition:all ease .3s}
 section.homepage-cards .card figure img{display:none}
 section.homepage-cards .card .titlediv{width:100%;height:60%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:absolute;left:0;bottom:0}
-section.homepage-cards .card .titlediv .wrap{position:relative;top:-10px}
+section.homepage-cards .card .titlediv .wrap{position:relative;top:-15px}
 section.homepage-cards .card .title{font-family:"CHUMI CHAMI",sans-serif;font-size:1.6rem;line-height:1.2;text-transform:uppercase;color:#9e7852}
 section.homepage-cards .card .icon{width:90px;height:90px;text-align:center;margin:0 auto;position:relative;top:-15px}
 section.homepage-cards .card .icon span{display:inline-block;width:120px;height:90px;background-size:80%;background-position:center;background-repeat:no-repeat;position:absolute;top:20px;left:-15px}
@@ -1789,6 +1789,7 @@ section.vendors div.ven img{width:100%}
 @media(min-width:767px){.wrapper{padding:0}
 .head-flex,.foot-flex,.pagetitle-flex{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 header.site-header .wrapper{height:100%}
+.floral-pattern{background-size:50%}
 nav.main-navigation,nav.main-navigation .primary-menu-wrap,nav.main-navigation #primary-menu{height:100%}
 nav.main-navigation ul.menu>li>a{min-height:60px}
 nav.main-navigation ul.menu ul a{color:#fbf1ea}
@@ -1804,6 +1805,7 @@ nav.main-navigation ul.menu ul a{color:#fbf1ea}
 section.pagetitle{height:40px}
 section.pagetitle h1{padding:0 15px}
 section.pagetitle .wrapper{padding:0}
+section.pagetitle .reg{left:8px}
 section.tile-wrapper .flex-wrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
 section.tile-wrapper .tile{width:33.33%;margin-bottom:45px}
 section.tile-wrapper .tile .pagelink{height:calc(100% + 45px)}
@@ -1812,7 +1814,7 @@ section.tile-wrapper .tile .info{position:absolute;bottom:0;left:0;z-index:5}
 section.home-cards .card{width:50%}
 section.home-cards .card .overlay.o1,section.home-cards .card .overlay.o4,section.home-cards .card .overlay.o5,section.home-cards .card .overlay.o8,section.home-cards .card .overlay.o10{background-color:rgba(180,168,89,.7)}
 section.home-cards .card .overlay.o2,section.home-cards .card .overlay.o3,section.home-cards .card .overlay.o6,section.home-cards .card .overlay.o7,section.home-cards .card .overlay.o9{background-color:rgba(190,103,72,.7)}
-section.homepage-cards .wrapper{max-width:80vw}
+section.homepage-cards .wrapper{max-width:85vw}
 section.homepage-cards .card{width:33.333%}
 section.homepage-cards.cols4 .wrapper{max-width:85vw}
 section.homepage-cards.cols4 .cards .card{width:25%}
@@ -1858,12 +1860,14 @@ section.vendors{width:600px;padding:40px;margin:20px auto;display:-webkit-box;di
 .site-footer .footer #footer-menu{-webkit-column-count:2;-moz-column-count:2;column-count:2}
 .site-footer .footer #footer-menu li{line-height:1.1;width:100%;text-align:left}
 .site-footer .footer #footer-menu a{display:inline-block;padding:8px 10px}
-header.site-header{z-index:100}
+header.site-header{position:fixed;top:0;left:0;z-index:100}
 header.site-header .wrapper{width:100%;height:100%}
 header.site-header #site-logo{left:20px}
+#page{padding-top:100px}
 body.subpage{padding-top:60px}
 body.subpage header.site-header{position:fixed;top:0}
 body.mobile-menu-open{overflow:hidden}
+body.mobile-menu-open .floral-pattern{background-image:none !important}
 #site-navigation{display:none}
 #primary-menu{margin:-10vh 0 0;padding:0;list-style:none}
 #primary-menu>li{width:100%;text-align:center}
@@ -1886,6 +1890,7 @@ html body.logged-in.admin-bar #wpadminbar{position:fixed}
 html body.logged-in.admin-bar .mobile-navigation .primary-menu-wrap{padding-top:105px}
 html body.logged-in.admin-bar header.site-header{top:-10px}
 html body.logged-in.admin-bar #mobile-menu-toggle{top:42px}
+section.pagetitle{position:fixed;top:60px;left:0;width:100%;z-index:15}
 }@media(max-width:640px){.fancybox__toolbar__items--center:not(:last-child){display:none}
 }@media screen and (max-width:600px){.schedule-activities .item{display:block;padding-bottom:15px;margin-top:17px !important}
 .schedule-activities .item span.time,.schedule-activities .item span.name{display:block;width:100%}
