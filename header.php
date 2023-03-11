@@ -27,7 +27,7 @@
           </a>
         </div>
   			<nav id="site-navigation" class="main-navigation desktop-navigation full-width-dropdown" role="navigation">
-  				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'container_class'=>'primary-menu-wrap' ) ); ?>
+  				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'container_class'=>'primary-menu-wrap','link_before'=>'<span><b>','link_after'=>'</b></span>' ) ); ?>
   			</nav><!-- #site-navigation -->
 			<div class="right-head">&nbsp;</div>
 		</div><!-- wrapper -->

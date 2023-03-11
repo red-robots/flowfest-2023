@@ -21,7 +21,7 @@ get_header(); ?>
 	
 			<?php 
       $evDate = get_field('event_date',get_the_ID());
-      $eventDay = ($evDate) ? date(l,strtotime($evDate)) : '';
+      $eventDay = ($evDate) ? date('l',strtotime($evDate)) : '';
       $activities = get_field('activities',get_the_ID());
       // $postTypes['festival'] = 'Festival Activities';
       // $postTypes['practices'] = 'Practices';

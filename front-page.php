@@ -16,13 +16,22 @@ get_header();
       <?php } ?>
 
 
-      <?php  if ( $cards = get_field('homepage_cards') ) { ?>
+      <?php  
+
+      if ( $cards = get_field('homepage_cards') ) { 
+          foreach ($cards as $k=>$item) {
+            $visibility = (isset($item['visibility'][0]) && $item['visibility'][0]) ? $item['visibility'][0] : '';
+            if($visibility=='hide') {
+              unset($cards[$k]);
+            }
+          }
+        ?>
 			<section class="homepage-cards <?php echo (count($cards)>3) ? 'cols4':'cols3'?>">
         <div class="wrapper">
           <div class="cards">
           <?php $n=1; foreach ($cards as $item) {  
             $title = $item['title'];
-            $visibility = (isset($item['visibility']) && $item['visibility']) ? ' ' . $item['visibility'][0] : '';
+            $visibility = (isset($item['visibility'][0]) && $item['visibility'][0]) ? ' ' . $item['visibility'][0] : '';
             $img = $item['image'];
             $link = $item['link'];
             $icon = $item['icon'];

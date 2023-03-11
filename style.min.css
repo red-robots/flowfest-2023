@@ -1468,12 +1468,15 @@ nav.main-navigation{width:auto;text-align:center}
 nav.main-navigation ul.menu{background:#f2e5c9;padding:0 8px}
 nav.main-navigation ul{margin:0;padding:0}
 nav.main-navigation li{margin:0;padding:0;display:inline-block;line-height:3;position:relative}
-nav.main-navigation ul.menu>li>a{display:block;text-decoration:none;padding:20px 25px;color:#0a2e3d;font-family:"CHUMI CHAMI",sans-serif;font-size:15px;line-height:1.3;position:relative;text-transform:uppercase}
-nav.main-navigation ul.menu>li>a:before,nav.main-navigation ul.menu>li>a:after{content:"";display:block}
-nav.main-navigation ul.menu>li.current_page_ancestor>a,nav.main-navigation ul.menu>li.current_page_item>a,nav.main-navigation ul.menu>li:hover>a{color:#fff}
+nav.main-navigation ul.menu>li{overflow:hidden}
+nav.main-navigation ul.menu>li>a{display:block;text-decoration:none;padding:20px 20px;color:#0a2e3d;font-family:"CHUMI CHAMI",sans-serif;font-size:15px;line-height:1.3;position:relative;text-transform:uppercase}
+nav.main-navigation ul.menu>li>a span{display:inline-block;position:relative;padding:3px;line-height:1.1}
+nav.main-navigation ul.menu>li>a span b{display:inline-block;font-weight:normal;position:relative;z-index:5}
+nav.main-navigation ul.menu>li>a span:before{content:"";display:block;width:120%;min-width:100px;min-height:65px;height:150%;margin-left:-50%;position:absolute;top:-22px;left:50%;-webkit-transform:translateX(-50%) scaleX(0);transform:translateX(-50%) scaleX(0);-webkit-transition:all ease .3s;transition:all ease .3s;background-image:url("images/n_linkhover.svg");background-size:contain;background-position:center;background-repeat:no-repeat}
 nav.main-navigation ul.menu>li.current_page_ancestor>a:before,nav.main-navigation ul.menu>li.current_page_ancestor>a:after,nav.main-navigation ul.menu>li.current_page_item>a:before,nav.main-navigation ul.menu>li.current_page_item>a:after,nav.main-navigation ul.menu>li:hover>a:before,nav.main-navigation ul.menu>li:hover>a:after{width:100%;left:0;opacity:1}
 nav.main-navigation ul.menu>li.current_page_ancestor>a:before,nav.main-navigation ul.menu>li.current_page_item>a:before,nav.main-navigation ul.menu>li:hover>a:before{top:3px;-webkit-transform:scaleX(1) translateX(0) rotate(0);transform:scaleX(1) translateX(0) rotate(0)}
 nav.main-navigation ul.menu>li.current_page_ancestor>a:after,nav.main-navigation ul.menu>li.current_page_item>a:after,nav.main-navigation ul.menu>li:hover>a:after{bottom:3px;-webkit-transform:scaleX(1) translateX(0) rotate(180deg);transform:scaleX(1) translateX(0) rotate(180deg)}
+nav.main-navigation ul.menu>li.current_page_ancestor>a span:before,nav.main-navigation ul.menu>li.current_page_item>a span:before,nav.main-navigation ul.menu>li:hover>a span:before{margin-left:0;-webkit-transform:translateX(-50%) scaleX(1);transform:translateX(-50%) scaleX(1)}
 nav.main-navigation ul.menu>li ul{display:block;position:absolute;width:180px;height:0;overflow:hidden;opacity:0;background:#c7a666;margin:-2px 0 0;padding:0;text-align:center;-webkit-transform:translate(-5px,-5px) scale(0.85);transform:translate(-5px,-5px) scale(0.85);-webkit-transition:all ease-in-out .3s;transition:all ease-in-out .3s;z-index:-999}
 nav.main-navigation ul.menu>li ul li{display:block;width:100%;text-align:left}
 nav.main-navigation ul.menu ul a{display:block;text-decoration:none;color:#e7d8cc;font-size:15px;line-height:1.2;padding:10px 15px}
@@ -1580,6 +1583,7 @@ section.home-cards .card .overlay.o2,section.home-cards .card .overlay.o4,sectio
 section.home-cards .card .overlay h2{width:100%;text-align:center;color:#fff}
 .home-content{position:relative}
 section.homepage-cards{background:#9e7852}
+section.homepage-cards .wrapper{max-width:100%}
 section.homepage-cards .cards{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding:5rem 0}
 section.homepage-cards .card{width:100%;padding:15px;position:relative}
 section.homepage-cards .card *{-webkit-transition:all ease .3s;transition:all ease .3s}
@@ -1808,6 +1812,7 @@ section.tile-wrapper .tile .info{position:absolute;bottom:0;left:0;z-index:5}
 section.home-cards .card{width:50%}
 section.home-cards .card .overlay.o1,section.home-cards .card .overlay.o4,section.home-cards .card .overlay.o5,section.home-cards .card .overlay.o8,section.home-cards .card .overlay.o10{background-color:rgba(180,168,89,.7)}
 section.home-cards .card .overlay.o2,section.home-cards .card .overlay.o3,section.home-cards .card .overlay.o6,section.home-cards .card .overlay.o7,section.home-cards .card .overlay.o9{background-color:rgba(190,103,72,.7)}
+section.homepage-cards .wrapper{max-width:80vw}
 section.homepage-cards .card{width:33.333%}
 section.homepage-cards.cols4 .wrapper{max-width:85vw}
 section.homepage-cards.cols4 .cards .card{width:25%}

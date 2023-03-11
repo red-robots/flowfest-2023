@@ -163,10 +163,13 @@ nav.main-navigation {
 		line-height: 3;
     position: relative;
 	}
+  ul.menu > li {
+    overflow: hidden;
+  }
   ul.menu > li > a {
     display: block;
     text-decoration: none;
-    padding: 20px 25px;
+    padding: 20px 20px;
     color: $color_secondary;
     font-family: $font2;
     font-size: 15px;
@@ -176,16 +179,44 @@ nav.main-navigation {
     @include tab {
       min-height: 60px;
     }
-    &:before, &:after {
-      content:"";
-      display: block;
+    span {
+      display: inline-block;
+      position: relative;
+      padding: 3px;
+      line-height: 1.1;
+      b {
+        display: inline-block;
+        font-weight: normal;
+        position: relative;
+        z-index: 5;
+      }
+      &:before {
+         content: "";
+        display: block;
+        width: 120%;
+        min-width: 100px;
+        min-height: 65px;
+        height: 150%;
+        margin-left: -50%;
+        position: absolute;
+        top: -22px;
+        left: 50%;
+        // transform: translateX(-50%);
+        transform: translateX(-50%) scaleX(0);
+        transition: all ease .3s;
+        background:{
+          image:url('images/n_linkhover.svg');
+          size: contain;
+          position: center;
+          repeat: no-repeat;
+        }
+      }
     }
   }
 
   ul.menu > li.current_page_ancestor > a,
   ul.menu > li.current_page_item > a,
   ul.menu > li:hover > a {
-    color: #FFF;
     &:before, &:after {
       width: 100%;
       left: 0;
@@ -198,6 +229,12 @@ nav.main-navigation {
     &:after {
       bottom: 3px;
       transform: scaleX(1) translateX(0) rotate(180deg);
+    }
+    span {
+      &:before {
+        margin-left: 0;
+        transform: translateX(-50%) scaleX(1);
+      }
     }
   }
   ul.menu > li ul {
@@ -990,6 +1027,12 @@ section.home-cards {
 
 section.homepage-cards {
   background: $color2;
+  .wrapper {
+    max-width: 100%;
+    @include tab {
+      max-width: 80vw;
+    }
+  }
   .cards {
     display: flex;
     flex-wrap: wrap;
