@@ -7,10 +7,21 @@
  * @package ACStarter
  */
 
-get_header(); ?>
+get_header(); 
+$CS = get_field('coming_soon'); 
+?>
+
+
+
 
   <div id="primary" class="content-area-full content-default-template">
     <main id="main" class="site-main" role="main">
+
+      <?php if( $CS[0] == 'soon' ) { ?>
+            <section class="coming-soon">
+              <div>Coming Soon</div>
+            </section>
+          <?php } else { ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
         <?php if ( get_the_content() ) {  ?>
@@ -97,7 +108,7 @@ get_header(); ?>
         </div>
       </section>
 			<?php } ?>
-			
+			<?php } ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
