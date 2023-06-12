@@ -1550,11 +1550,13 @@ section.pagetitle .reg a:hover span{-webkit-transform:translateY(5px);transform:
 section.pagetitle .reg a:hover:before{-webkit-transform:translateY(5px) scale(1.1);transform:translateY(5px) scale(1.1)}
 section.tile-wrapper{width:100%;padding:40px 0}
 section.tile-wrapper .tile{width:100%;float:left;margin-bottom:10px;padding:10px}
+section.tile-wrapper .tile .overlay{width:100%;height:100%;position:absolute;top:0;left:0;background:black;background:-webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,0)),to(rgba(0,0,0,0.5)));background:linear-gradient(180deg,rgba(0,0,0,0) 0,rgba(0,0,0,0.5) 100%);-webkit-transition:all ease .2s;transition:all ease .2s;z-index:10}
+section.tile-wrapper .tile .overlay:hover{background:-webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,0)),to(rgba(0,0,0,0)));background:linear-gradient(180deg,rgba(0,0,0,0) 0,rgba(0,0,0,0) 100%)}
 section.tile-wrapper .tile .pagelink{display:block;width:100%;float:left;text-decoration:none;overflow:hidden;position:relative}
 section.tile-wrapper .tile .pagelink *{-webkit-transition:all ease .3s;transition:all ease .3s}
-section.tile-wrapper .tile .img{width:100%;line-height:0;margin:0;width:100%;float:left;background-size:cover;background-position:center;background-repeat:no-repeat}
-section.tile-wrapper .tile .img img{width:100%;height:auto;float:left}
-section.tile-wrapper .tile .info{background-image:url(images/green-repeat.png);background-repeat:repeat;min-height:50px;width:100%;float:left;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:nowwrap;flex-wrap:nowwrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:relative;z-index:10}
+section.tile-wrapper .tile .img{width:100%;line-height:0;margin:0;width:100%;float:left;position:relative;z-index:9;background-size:cover;background-position:center;background-repeat:no-repeat}
+section.tile-wrapper .tile .img img{width:100%;height:auto;float:left;position:relative;z-index:9}
+section.tile-wrapper .tile .info{background-image:url(images/green-repeat.png);background-repeat:repeat;min-height:50px;width:100%;float:left;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:nowwrap;flex-wrap:nowwrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:relative;z-index:15}
 section.tile-wrapper .tile .info .title{width:auto;padding-left:20px}
 section.tile-wrapper .tile .info .title h2{font-family:"CHUMI CHAMI",sans-serif;font-size:18px;color:#fff;margin:0;line-height:1;text-transform:uppercase;letter-spacing:1px;padding-top:10px;padding-bottom:10px}
 section.tile-wrapper .tile .info.has-time .title{padding-right:100px}
@@ -1801,7 +1803,7 @@ section.tile-wrapper .flex-wrap{display:-webkit-box;display:-ms-flexbox;display:
 section.tile-wrapper .tile{width:33.33%;margin-bottom:45px}
 section.tile-wrapper .tile .pagelink{height:calc(100% + 45px)}
 section.tile-wrapper .tile .img{height:100%}
-section.tile-wrapper .tile .info{position:absolute;bottom:0;left:0;z-index:5}
+section.tile-wrapper .tile .info{position:absolute;bottom:0;left:0}
 section.home-cards .card{width:50%}
 section.home-cards .card .overlay.o1,section.home-cards .card .overlay.o4,section.home-cards .card .overlay.o5,section.home-cards .card .overlay.o8,section.home-cards .card .overlay.o10{background-color:rgba(180,168,89,0.7)}
 section.home-cards .card .overlay.o2,section.home-cards .card .overlay.o3,section.home-cards .card .overlay.o6,section.home-cards .card .overlay.o7,section.home-cards .card .overlay.o9{background-color:rgba(190,103,72,0.7)}

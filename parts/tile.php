@@ -12,18 +12,21 @@ $pagelink = get_permalink();
 ?>
 <div class="tile <?php echo $has_image ?>">
   <a href="javascript:void(0)" data-id="<?php echo get_the_ID() ?>" data-pagelink="<?php echo $pagelink ?>" class="pagelink postinfo">
+    
   	<figure class="img" <?php echo $image_style ?>>
       <img src="<?php echo THEMEURI ?>images/image-helper.png" alt="">
     </figure>
-  	<div class="info <?php echo ($time_only) ? 'has-time':'no-item' ?>">
-  		<div class="title">
-  			<h2><?php the_title(); ?></h2>
-  		</div>
-      <?php if ($time_only) { ?>
-      <div class="time">
-        <?php echo $time_only; ?>
-      </div>
-      <?php } ?>
-  	</div>
+    <div class="overlay">
+    	<div class="info <?php echo ($time_only) ? 'has-time':'no-item' ?>">
+    		<div class="title">
+    			<h2><?php the_title(); ?></h2>
+    		</div>
+        <?php if ($time_only) { ?>
+        <div class="time">
+          <?php echo $time_only; ?>
+        </div>
+        <?php } ?>
+    	</div>
+    </div>
   </a>
 </div>
