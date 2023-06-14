@@ -1540,7 +1540,7 @@ footer.site-footer nav.footer a:hover{opacity:1;color:#fff}
 .logo-overlay{width:200px;z-index:10}
 .logo-overlay img{width:100%}
 section.pagetitle{background-color:#0a2e3d;position:relative}
-section.pagetitle h1{display:block;width:100%;text-align:center;font-family:"CHUMI CHAMI",sans-serif;font-size:1.5rem;line-height:1.2;color:#fff;text-transform:uppercase;position:relative;top:4px;margin:0;padding:0 15px 0 95px;letter-spacing:1px}
+section.pagetitle h1{display:block;width:100%;text-align:right;font-family:"CHUMI CHAMI",sans-serif;font-size:1.5rem;line-height:1.2;color:#fff;text-transform:uppercase;position:relative;top:0;margin:0;padding:0 0 0 95px;letter-spacing:1px}
 section.pagetitle .wrapper{position:relative;min-height:40px;height:100%;padding:10px 15px}
 section.pagetitle .reg{display:inline-block;width:120px;height:120px;position:absolute;top:-40px;left:28px;z-index:5}
 section.pagetitle .reg a{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-ms-flex-line-pack:center;align-content:center;line-height:1.1;color:#FFF;text-transform:uppercase;width:100%;height:100%;text-decoration:none}
@@ -1797,7 +1797,7 @@ nav.main-navigation ul.menu ul a{color:#fbf1ea}
 #banner ul.slides.single-slide .type-video{margin-top:0}
 .logo-overlay{width:500px}
 section.pagetitle{height:40px}
-section.pagetitle h1{padding:0 15px}
+section.pagetitle h1{padding:0 15px;text-align:center}
 section.pagetitle .wrapper{padding:0}
 section.pagetitle .reg{left:8px}
 section.tile-wrapper .flex-wrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}

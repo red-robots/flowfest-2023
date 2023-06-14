@@ -752,19 +752,20 @@ section.pagetitle {
   h1 {
     display: block;
     width: 100%;
-    text-align: center;
+    text-align: right;
     font-family: $font2;
     font-size: 1.5rem;
     line-height: 1.2;
     color: #fff;
     text-transform: uppercase;
     position: relative;
-    top: 4px;
+    top: 0px;
     margin: 0 0;
-    padding:0 15px 0 95px;
+    padding:0 0 0 95px;
     letter-spacing: 1px;
     @include tab {
       padding:0 15px;
+      text-align: center;
     }
   }
   .wrapper {
