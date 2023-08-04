@@ -41,12 +41,16 @@ $vendors = get_field('vendors');
 						<?php if( $vendors ) { ?>
 							<section class="vendors">
 								<?php foreach( $vendors as $v ) { 
+									$link = get_field('link', $v['ID']);
 									// echo '<pre>';
 									// print_r($v);
 									// echo '</pre>';
+									
 									?>
 									<div class="ven">
+										<a href="<?php echo $link['url']; ?>">
 										<img src="<?php echo $v['url'] ?>" alt="<?php echo $v['alt'] ?>">
+									</a>
 									</div>
 								<?php } ?>
 							</section>
