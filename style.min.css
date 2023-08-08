@@ -1743,6 +1743,8 @@ section.faqs .faqrow.active .question .plus-minus-toggle:after{-webkit-transform
 .schedule-activities .activities .item span.name{color:#000}
 .schedule-activities .activities .item a{display:inline-block;text-decoration:none;color:#9e7852}
 .schedule-activities .activities .item a:hover{color:#c7a666}
+.schedule-activities .activities .item a.practices{color:#035455}
+.schedule-activities .activities .item a.workshops{color:#c7a666}
 .filter-option{max-width:350px;width:100%;margin:0 auto 50px;position:relative}
 .filter-option label{display:inline-block;margin:0;width:85px;height:32px;background:#707070;color:#fff;text-transform:uppercase;text-align:center;padding:10px 5px 8px;font-size:14px;line-height:1}
 .filter-option .select-wrap{width:calc(100% - 85px);height:32px;position:absolute;top:0;right:1px;border:1px solid #707070;background:#FFF}

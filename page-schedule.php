@@ -95,7 +95,7 @@ $CS = get_field('coming_soon');
 
               <?php if ( $item ) { ?>
                 <?php if ($show_popup) { ?>
-                  <span class="name"><a class="popup-activity" href="javascript:void(0)" data-id="<?php echo $postid ?>"><?php echo $item_title ?></a></span>
+                  <span class="name"><a class="popup-activity <?php echo $cpt ?>" href="javascript:void(0)" data-id="<?php echo $postid ?>"><?php echo $item_title ?></a></span>
                 <?php } else { ?>
                   <span class="name"><?php echo $item_title ?></span>
                 <?php } ?>

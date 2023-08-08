@@ -2194,6 +2194,12 @@ section.faqs {
         &:hover {
           color: $color-gold;
         }
+        &.practices {
+        	color: $color-green;
+        }
+        &.workshops {
+        	color: $color-gold;
+        }
       }
     }
   }
