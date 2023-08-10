@@ -3,12 +3,12 @@
  * Enqueue scripts and styles.
  */
 function bellaworks_scripts() {
-	wp_enqueue_style( 'bellaworks-style', get_stylesheet_uri(), array(), '1.26' );
+	wp_enqueue_style( 'bellaworks-style', get_stylesheet_uri(), array(), '1.27' );
 
 	wp_deregister_script('jquery');
 		//wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', false, '1.10.2', true);
 		//wp_enqueue_script('jquery');
-    wp_register_script('jquery', 'https://code.jquery.com/jquery-3.3.1.min.js', false, '3.5.1', false);
+    wp_register_script('jquery', 'https://code.jquery.com/jquery-3.5.1.min.js', false, '3.5.1', false);
     wp_enqueue_script('jquery', false, array(), false, false);
 	
 

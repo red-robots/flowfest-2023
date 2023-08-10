@@ -76,6 +76,59 @@ function init_scripts() {
     return true;
 }
 
+add_shortcode( 'team_list', 'team_list_shortcode_func' );
+function team_list_shortcode_func( $atts ) {
+  $a = shortcode_atts( array(
+    'numcol'=>3
+  ), $atts );
+  $numcol = ($a['numcol']) ? $a['numcol'] : 3;
+  $output = '';
+  ob_start();
+  //include( locate_template('parts/team_feeds.php') );
+  get_template_part('parts/team_feeds',null,$a);
+  $output = ob_get_contents();
+  ob_end_clean();
+  return $output;
+}
+
+
+add_shortcode( 'feeds', 'feeds_shortcode_func' );
+function feeds_shortcode_func( $atts ) {
+  $output = '';
+  $a = shortcode_atts( array(
+    'post'=>'',
+    'filter'=>'',
+    'perpage'=>'-1'
+  ), $atts );
+  
+  $filter = (isset($a['filter']) && $a['filter']) ? $a['filter'] : '';
+  $post_type = (isset($a['post']) && $a['post']) ? $a['post'] : '';
+  $perpage = (isset($a['perpage']) && $a['perpage']) ? $a['perpage'] : '-1';
+  $paged = ( get_query_var( 'pg' ) ) ? absint( get_query_var( 'pg' ) ) : 1;
+  if($post_type) {
+    ob_start();
+    $args = array(
+      'posts_per_page'  => $perpage,
+      'post_type'       => $post_type,
+      'post_status'     => 'publish',
+      'paged'           => $paged,
+      'facetwp'         => true,
+      'orderby'         => 'menu_order',
+      'order'           => 'ASC'
+    );
+    include( locate_template('parts/feeds.php') );
+    $output = ob_get_contents();
+    ob_end_clean();
+    if($output) {
+      $pattern = "/<p[^>]*><\\/p[^>]*>/"; 
+      $output = str_replace('<p></p>','',$output);
+      $output = preg_replace( $pattern, '', $output );
+      $output = preg_replace('/<br>|\n|<br( ?)\/>/', '', $output);
+    }
+  }
+  return $output;
+}
+
 function get_page_id_by_template($fileName) {
     $page_id = 0;
     if($fileName) {
@@ -240,6 +293,58 @@ function get_post_info() {
   }
   die();
 }
+
+
+
+
+
+function my_ajax_files() {
+ wp_localize_script( 'function', 'my_ajax_script', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
+}
+add_action('template_redirect', 'my_ajax_files');
+
+
+add_action( 'wp_ajax_nopriv_getPostData', 'getPostData' );
+add_action( 'wp_ajax_getPostData', 'getPostData' );
+function getPostData() {
+  if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+    $post_id = ($_POST['post_id']) ? $_POST['post_id'] : 0;
+    $post = get_post($post_id);
+    $html = ($post) ? getPostContentHTML($post) : '';
+    
+    $response['content'] = $html;
+    echo json_encode($response);
+  }
+  else {
+    header("Location: ".$_SERVER["HTTP_REFERER"]);
+  }
+  die();
+}
+function getPostContentHTML($obj) {
+  $post_id = $obj->ID;
+  $post_title = $obj->post_title;
+  $content = $obj->post_content;
+  $content = apply_filters('the_content',$content); 
+  ob_start(); ?>
+  <div id="event-details" class="fullwidth-block event-details animated fadeIn">
+    <div class="inner">
+      <a href="javascript:void(0)" class="close-event-info"></a>
+      <h2 class="eventtitle"><?php echo $post_title ?></h2>
+      <div class="eventinfo"><?php echo $content ?></div>
+    </div>
+  </div>
+  <?php
+  $content = ob_get_contents();
+  ob_end_clean();
+  return $content;
+}
+
+
+
+
+
+
+
 
 /* Disable Gutenberg by post_type */
 function ea_disable_gutenberg( $can_edit, $post_type ) {

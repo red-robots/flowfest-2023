@@ -117,6 +117,71 @@ jQuery(document).ready(function ($) {
 	      }
 	    }
 	});
+
+
+
+     /* Artists */
+  $('.column.post-type-artists').on("click",function(e){
+    e.preventDefault();
+    var target = $(this);
+    var post_id = $(this).attr('data-postid');
+    var parent = $(this).parents('.parent-wrap');
+    $('.column.post-type-artists').not(target).removeClass('active');
+    target.addClass('active');
+    $.ajax({
+      url : frontajax.ajaxurl,
+      type : 'post',
+      dataType : "json",
+      data : {
+        action : 'getPostData',
+        post_id : post_id
+      },
+      beforeSend:function(){
+        //$(".ml-loader-wrap").show();
+        if( $('.event-details').length ) {
+          $('.event-details').remove();
+        }
+        $(window).on('orientationchange resize',function(){
+          if( $('.event-details').length ) {
+            $('.event-details').remove();
+          }
+        });
+        $('body').removeClass('closed-event-details');
+      },
+      success:function(response) {
+        if(response.content) {
+
+          if( $(window).width() < 821 ) {
+            //$(response.content).appendTo(target);
+            $(response.content).insertAfter(target);
+          } else {
+            $(response.content).appendTo(parent);
+          }
+
+          $(window).on('orientationchange resize',function(){
+            if( $(window).width() < 821 ) {
+              $(response.content).insertAfter(target);
+            } else {
+              if( $('body').hasClass('closed-event-details') ){
+                //do nothing...
+              } else {
+                $(response.content).appendTo(parent);
+              }
+            }
+          });
+
+        }
+      },
+      complete:function(){
+        $(document).on('click','.close-event-info',function(){
+          $('#event-details').remove();
+          $('body').addClass('closed-event-details');
+          $('.column.post-type-artists').removeClass('active');
+        });
+      }
+    });
+
+  });
 	
 
 	/*
